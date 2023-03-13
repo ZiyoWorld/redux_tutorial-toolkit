@@ -1,15 +1,24 @@
-import React from "react";
-// import { Counter } from "../components/Counter";
 import PostsList from "../components/posts/PostsList";
 import AddPostForm from "../components/posts/AddPostForm";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SinglePostPage from "../components/posts/SinglePostPage";
+import EditPostForm from "../components/posts/EditPostForm";
+import Layout from "../components/Layout";
+import { Routes, Route } from "react-router-dom";
 
-const Root = () => {
+function Root() {
   return (
-    <main className="App">
-      <AddPostForm />
-      <PostsList />
-    </main>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<PostsList />} />
+
+        <Route path="post">
+          <Route index element={<AddPostForm />} />
+          <Route path=":postId" element={<SinglePostPage />} />
+          <Route path="edit/:postId" element={<EditPostForm />} />
+        </Route>
+      </Route>
+    </Routes>
   );
-};
+}
+
 export default Root;

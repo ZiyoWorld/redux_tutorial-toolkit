@@ -18,7 +18,7 @@
 // Table of Contents
 // Ecosystem
 // Table of Contents
-// Library Integration and Bindings 
+// Library Integration and Bindings
 // Reducers
 // Reducer Combination
 // Reducer Composition
