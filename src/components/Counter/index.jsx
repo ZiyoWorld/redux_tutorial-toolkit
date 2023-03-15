@@ -9,6 +9,8 @@ import {
 
 export const Counter = () => {
   const count = useSelector((state) => state.counter.count);
+  // const decr = useSelector((state) => state.counter.d);
+  // console.log(decr, "decr");
   const dispatch = useDispatch();
 
   const [incrementByAmount, setIncrementByAmount] = useState(0);
@@ -17,6 +19,11 @@ export const Counter = () => {
     setIncrementByAmount(0);
     dispatch(recent());
   };
+
+  // const a = useRef("");
+  // const b = useRef("");
+  // const c = useRef("");
+
   return (
     <div>
       <h1>Counter: {count}</h1>
@@ -36,6 +43,14 @@ export const Counter = () => {
         </button>
         <button onClick={resetAll}>Reset</button>
       </div>
+
+      {/* <div>
+        <h1>Determenet {decr} </h1>
+        <input type="text" ref={a} />
+        <input type="text" ref={b} />
+        <input type="text" ref={c} />
+        <button onClick={() => dispatch(discremenant())}>Add</button>
+      </div> */}
     </div>
   );
 };

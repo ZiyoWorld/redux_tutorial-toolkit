@@ -52,3 +52,7 @@
 // Forms
 // Higher-Level Abstractions
 // Community Conventions
+
+//* Done
+// created store
+// createStore to actually create a Redux store

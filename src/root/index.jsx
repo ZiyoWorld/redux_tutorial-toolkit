@@ -1,12 +1,15 @@
-import Counter from "../components/Counter";
+// import Counter from "../components/Counter";
+import AddPostForm from "../components/posts/AddPostForm";
+import PostList from "../components/posts/PostList";
 
-function Root() {
+const Root = () => {
   return (
-    <div>
-      <h1>Redux</h1>
-      <Counter />
-    </div>
+    <main className="App">
+      {/* <Counter /> */}
+      <AddPostForm />
+      <PostList />
+    </main>
   );
-}
+};
 
 export default Root;
