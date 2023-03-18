@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
 import Root from "./root";
 import { store } from "./redux/store";
@@ -11,7 +11,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 store.dispatch(fetchPosts());
 store.dispatch(fetchUsers());
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
@@ -20,6 +21,5 @@ ReactDOM.render(
         </Routes>
       </Router>
     </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
